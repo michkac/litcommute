@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lit Commute</title>
+	<link rel="icon" type="" href="assets/icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<div class="wrapper">
+
+	<div class="landing" id="landing">
+		<h1>Lit Commute</h1>
+		<h2>Do you have a routine public transit commute and a book you've been meaning to read? Find out how many commutes it'll take to conquer that book!</h2>
+		<a href="#inputs" class="startLink">Start</a>
+		<img src="assets/commuters.png" class="commutersImg" alt="three commuters on a subway, one reading a book">
+	</div>
+
+	<div class="inputs" id="inputs">
+		<form action="userForm" class="userForm">
+			<h2>Please enter point A and B of your public transit commute, as well as the book you'd like to finish. (The more specific the better!)</h2>
+			<label class="visuallyhidden" for="origin">Commute point A</label>
+			<input type="text" id="origin" name="origin" placeholder="Commute point A" autocomplete="off">
+			<label class="visuallyhidden" for="destination">Commute point B </label>
+			<input type="text" id="destination" name="destination" placeholder="Commute point B " autocomplete="off">
+			<label class="visuallyhidden" for="bookName">Book title or isbn </label>
+			<input type="text" id="bookName" name="bookName" placeholder="Book title or isbn" autocomplete="off">
+			<input type="submit" class="calculateBtn" value="calculate">
+			<img src="assets/commuters.png" class="commutersImg" alt="three commuters on a subway, one reading a book">
+			
+			<div class="loader-backdrop">
+				<div class="loader"></div>
+			</div>
+
+		</form>			
+	</div>
+
+	<div class="result" id="result">
+		<h2 class="firsth2">If you keep your nose in your book for most of the ride, it should take you <span class="numOfCommutes"></span> commutes to finish reading <span class="book"></span>.</h2>
+		<p>(If this commute happens twice a day, it'll only take you <span class="days"></span> days!)</p>
+		<a href="#landing" class="reset">Reset</a>
+		<img src="assets/commuters.png" class="commutersImg" alt="three commuters on a subway, one reading a book">
+	</div>
+
+</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAFFNX_H2r-7YNi9-b3HfY9cUagJCGHjw"></script>
+	<script src="js/scripts.js"></script>
+	
+</body>
+</html>
